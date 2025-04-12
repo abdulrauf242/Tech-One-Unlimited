@@ -1,0 +1,614 @@
+#logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+     
+}
+/* Remove horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+/* Ensure the dropdown icon is aligned to the right of the text */
+#servicesLink {
+    display: inline-flex; /* Align text and icon next to each other */
+    align-items: center;  /* Vertically center the text and icon */
+}
+
+/* Space between text and icon */
+#servicesLink i {
+    margin-left: 5px;   /* Adjust space between the text and the icon */
+    font-size: 18px;    /* Adjust icon size */
+}
+
+/* Ensure the dropdown is shown when hovering over the Services text or icon */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;  /* Show the dropdown when hovering */
+}
+
+/* Hide dropdown by default */
+.dropdown-menu {
+    display: none;
+}
+
+/* Navbar toggle button color */
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-brand{
+    margin-left: 10px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 600;
+}
+.navbar{
+    display: flex;
+    background-color: none;
+    padding: 10px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+.navbar-nav .nav-link{
+    color: white;
+    margin-right: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-decoration-color: #676b6e;
+    text-decoration-thickness: 2px;
+    text-decoration-style: solid;
+}
+a.nav-link:hover{
+    color: #adb4b9;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-underline-position: under;
+    text-underline-color: #676b6e;
+}
+a.nav-link.nav-link.active:hover{
+    color: #adb4b9;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-underline-position: under;
+    text-underline-color: #676b6e;
+}
+.navbar-nav .nav-link.active{
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-underline-position: under;
+    text-underline-color: white;
+}
+a.navbar-brand:hover{
+    color: #adb4b9;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-underline-position: under;
+    text-underline-color: #676b6e;
+}
+.background{
+  background-image: url(./home.jpg);
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: #444649;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
+}
+.About{
+    margin-top: 270px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+   }
+   .about{
+     font-size: 7.5rem;
+        font-weight: 900;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+        text-decoration: underline;
+        text-decoration-color: #676b6e;
+        text-decoration-thickness: 2px;
+        text-decoration-style: solid;
+        text-underline-offset: 5px;
+        text-underline-position: under;
+        text-underline-color: #676b6e;
+        text-underline-color: white;
+        margin-top: -50px;
+
+   }
+   /*  */
+   /* body {
+    background-color: #1c1c1c;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+   */
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    padding: 50px;
+    justify-items: center;
+    color: black;
+    font-family: Arial, sans-serif;
+    background-color: #7ad1e0;
+  }
+  .service-section{
+
+  }
+  .service-card {
+    background-color: #7ad1e0;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .service-card i {
+    font-size: 30px;
+    color: red;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .service-card h3 {
+    font-size: 16px;
+    color: white;
+    text-decoration: underline;
+  }
+
+  .service-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .cta-box {
+    background-color: black ;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 25px 25px 25px 25px;
+    flex-wrap: wrap;
+    width: 50%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .cta-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+  }
+  
+  .phone-icon {
+    font-size: 35px;
+  }
+  
+  .cta-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .cta-right {
+    flex: 2;
+    margin-top: 10px;
+  }
+  
+  .cta-right p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .cta-button {
+    background-color: white;
+    color: #f5112c;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #fdd;
+  }
+
+  .cta-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+/* Center the .cta-box using Flexbox */
+.cta-box-main{
+  display: flex !important;
+  justify-content: center !important; /* Center horizontally */
+  align-items: center !important; /* Center vertically */
+}
+/*  */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .process-section {
+    text-align: center;
+    padding: 60px 30px;
+    position: relative;
+  }
+  
+  .process-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .process-section .red {
+    color: #7ad1e0;
+  }
+  
+  .subheading {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+  
+  .process-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    position: relative;
+  }
+  
+  .process-step {
+    position: relative;
+  }
+  
+  .step-circle {
+    background-color: white;
+    border: 4px solid #ddd;
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    padding: 40px 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    transition: border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .step-circle:hover {
+    border-color:#7ad1e0;
+  }
+  
+  .step-circle.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .step-number {
+    background-color: #7ad1e0;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 10px 15px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 16px;
+  }
+  
+  .step-circle h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .step-circle p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Optional Background Dashed Line with Plane */
+  .process-section::after {
+    content: "";
+    position: absolute;
+    top: 170px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: url('https://i.ibb.co/NrsX0KR/dotted-path.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  /*  */
+  #footer{
+    background-color: #131111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 30px;
+  }
+  #footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+/* Extra Large Screens (1200px and above) */
+@media (min-width: 1200px) {
+  .services-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+  }
+.about{
+    font-size: 7.1rem ;
+}
+  .cta-box {
+    width: 60%;
+    padding: 40px;
+  }
+
+  .step-circle {
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+  }
+
+  .step-circle h3 {
+    font-size: 20px;
+  }
+
+  .step-circle p {
+    font-size: 16px;
+  }
+}
+
+/* Large Screens (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+  }
+  .about{
+     font-size: 6.5rem;
+  }
+
+  .cta-box {
+    width: 70%;
+    padding: 35px;
+  }
+
+  .step-circle {
+    width: 280px;
+    height: 280px;
+    padding: 40px;
+  }
+
+  .step-circle h3 {
+    font-size: 18px;
+  }
+
+  .step-circle p {
+    font-size: 14px;
+  }
+}
+
+/* Medium Screens (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px;
+  }
+.about{
+    font-size: 4.2rem;
+}
+  .cta-box {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .step-circle {
+    width: 250px;
+    height: 250px;
+    padding: 30px;
+  }
+
+  .step-circle h3 {
+    font-size: 16px;
+  }
+
+  .step-circle p {
+    font-size: 14px;
+  }
+}
+
+/* Small Screens (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .services-container {
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 15px;
+  }
+.about{
+    font-size: 5.5rem;
+}
+  .cta-box {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .step-circle {
+    width: 220px;
+    height: 220px;
+    padding: 20px;
+  }
+
+  .step-circle h3 {
+    font-size: 14px;
+  }
+
+  .step-circle p {
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Screens (up to 575px) */
+@media (max-width: 575px) {
+  /* General adjustments */
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 0 10px; /* Add padding for better spacing */
+  }
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    padding: 10px;
+  }
+
+  .navbar-toggler {
+    display: block; /* Ensure toggle button is visible */
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav {
+    display: none; /* Initially hide the menu */
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 10px;
+  }
+
+  .navbar-nav.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .services-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .about {
+    font-size: 4.4rem; /* Adjust font size for smaller screens */
+    text-align: center;
+    margin-top: -130px;
+  }
+
+  .cta-box {
+    width: 100%; /* Full width */
+    padding: 20px;
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+    border-radius: 0%;
+  }
+
+  .step-circle {
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    margin: 0 auto; /* Center the circle */
+  }
+
+  .step-circle h3 {
+    font-size: 12px;
+  }
+
+  .step-circle p {
+    font-size: 10px;
+  }
+
+  .cta-button {
+    font-size: 12px;
+    padding: 8px 16px;
+    margin-top: 10px;
+    color: #7ad1e0;
+  }
+  .cta-button:hover{
+    background-color: #7ad1e0;
+    color: white;
+  }
+
+  #footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale-up animation */
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hidden by default */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Visible when in viewport */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
