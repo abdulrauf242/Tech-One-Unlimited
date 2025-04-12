@@ -376,12 +376,27 @@ a.navbar-brand:hover{
     .mission-right {
       flex-direction: column;
       gap: 20px;
+
+    }
+    body{
+      overflow-x: hidden !important; /* Prevent horizontal scrolling */
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    html{
+      overflow-x: hidden !important; /* Prevent horizontal scrolling */
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
     }
   }
 #img-i{
     height: 60px;
     width: 60px;
+
   }
+
 
 /* Default styles (for large screens) */
 
@@ -1173,4 +1188,5 @@ p{
   }
 }
 
+/*  */
 

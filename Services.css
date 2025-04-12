@@ -524,6 +524,12 @@ body {
     display: flex; /* Show menu when active */
   }
 
+  .navbar-nav.show {
+    display: flex; /* Show menu when toggler is clicked */
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .services-container {
     grid-template-columns: 1fr; /* Single column layout */
     gap: 10px;

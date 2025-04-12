@@ -12,3 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach(element => observer.observe(element));
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const toggler = document.querySelector('.navbar-toggler');
+  const navbarMenu = document.querySelector('#navbarSupportedContent');
+
+  toggler.addEventListener('click', function () {
+    navbarMenu.classList.toggle('show');
+  });
+});
