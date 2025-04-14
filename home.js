@@ -43,3 +43,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   percentages.forEach(percentage => percentageObserver.observe(percentage));
 });
+// 

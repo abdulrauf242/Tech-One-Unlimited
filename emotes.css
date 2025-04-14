@@ -4,11 +4,8 @@
     border-radius: 50px;
      
 }
-.navbar{
-    flex-wrap: none !important;
-    justify-content: none !important;
-    align-items: none !important;
-    flex-wrap: unset !important;
+div.card{
+    height: 460px;
 }
 /* Remove horizontal scroll */
 body {
@@ -27,8 +24,6 @@ body {
         font-family: 'Courier New', Courier, monospace;
         font-size: 20px;
         font-weight: 600;
-        margin-top: 40px;
-        
     }
     a.btn-primary:hover{
         background-color: #308cb6;
@@ -44,7 +39,14 @@ body {
         border: #000000 1px solid;
         box-shadow: #000000 0px 0px 10px;
     }
-
+    video{
+        height: 160px;
+        object-fit: cover;
+    }
+img{
+    height: 160px;
+    object-fit: cover;
+}
 /* Hide dropdown by default */
 .dropdown-menu {
     display: none;
@@ -163,7 +165,6 @@ body {
      }
      .card{
         margin-top: 50px;
-        height: 700px;
      
      }
      .card:hover{
@@ -178,66 +179,13 @@ body {
         flex-direction: column;
      }
      img{
+        height: 160px;
         object-fit: cover;
-        transition: 0.3s ease-in-out;
      }
      video{
         object-fit: cover;
      }
-     a.btn.btn-primaryy{
-        background-color: #308cb6;
-        border-color: #676b6e;
-        color: white;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 20px;
-        font-weight: 600;
-        margin-top: 60px;
-        
-    }
-    a.btn-primaryy:hover{
-        background-color: #308cb6;
-        border-color: #adb4b9;
-        color: white;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 20px;
-        font-weight: 600;
-    }
-    a.btn.btn-primaryyy{
-        background-color: #308cb6;
-        border-color: #676b6e;
-        color: white;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 20px;
-        font-weight: 600;
-        margin-top: 90px;
-        
-    }
-    a.btn-primaryyy:hover{
-        background-color: #308cb6;
-        border-color: #adb4b9;
-        color: white;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 20px;
-        font-weight: 600;
-    }
-    a.btn.btn-primaryyyy{
-        background-color: #308cb6;
-        border-color: #676b6e;
-        color: white;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 20px;
-        font-weight: 600;
-        margin-top: 140px;
-        
-    }
-    a.btn-primaryyyy:hover{
-        background-color: #308cb6;
-        border-color: #adb4b9;
-        color: white;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 20px;
-        font-weight: 600;
-    }
+
 
 @media (max-width: 768px) {
     .navbar {
@@ -255,25 +203,7 @@ body {
         font-size: 4rem;
     }
     img{
-        height: 50%;
-    }
-}
-@media (max-width: 370px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navbar-nav .nav-link {
-        margin-right: 5px;
-        font-size: 16px;
-    }
-    .navbar-brand{
-        font-size: 18px;
-    }
-    .about{
-        font-size: 4rem;
-    }
-    img{
+        width: 50%;
         height: 50%;
     }
 }
@@ -335,3 +265,4 @@ body {
     text-decoration: none;
     font-weight: bold;
   }
+  
