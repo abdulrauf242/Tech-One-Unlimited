@@ -1,3 +1,7 @@
+alert("Welcome to my website!");
+// This script will animate elements with the class "hidden" when they come into view
+// and also animate percentage counters when they come into view.
+// The animation is triggered using Intersection Observer API for better performance.
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".hidden");
   console.log("Elements to observe:", elements);
@@ -11,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
   elements.forEach(element => observer.observe(element));
 
   // Select all percentage elements
@@ -44,3 +47,4 @@ document.addEventListener("DOMContentLoaded", () => {
   percentages.forEach(percentage => percentageObserver.observe(percentage));
 });
 // 
+console.log("Abdul rauf");
