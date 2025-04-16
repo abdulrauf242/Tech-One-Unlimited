@@ -115,7 +115,7 @@ img{
   }
   
   .background{
-      background-image: url(./home.jpg);
+    background-image: url(./image.png);
         background-size: cover;
         height: 50vh;
         width: 100%;
